@@ -40,7 +40,7 @@ class Call extends StatelessWidget {
           child: ListView(children: [
             Utilities().listtile('Naarendra Meena',
                 true,
-                'https://cdn.pixabay.com/photo/2019/11/11/17/42/indian-4619020_640.jpg')
+                'https://cdn.pixabay.com/photo/2023/09/02/04/49/man-8228179_640.jpg')
           ],
           ),
 
@@ -49,7 +49,7 @@ class Call extends StatelessWidget {
           child: ListView(children: [
             Utilities().listtile('Rahul Rundala',
                 false,
-                'https://cdn.pixabay.com/photo/2019/11/11/17/42/indian-4619020_640.jpg')
+                'https://cdn.pixabay.com/photo/2017/11/26/01/05/bollywood-2977939_640.png')
           ],
           ),
 
@@ -67,7 +67,7 @@ class Call extends StatelessWidget {
           child: ListView(children: [
             Utilities().listtile('Raju',
                 true,
-                'https://cdn.pixabay.com/photo/2019/11/11/17/42/indian-4619020_640.jpg')
+                'https://cdn.pixabay.com/photo/2022/10/26/08/56/bollywood-7547855_640.png')
           ],
           ),
 

@@ -72,24 +72,30 @@ class Utilities {
 
   Widget listtile(String title, bool flag, String url) {
     return ListTile(
-      title: Text(title.toString(),style: flag?TextStyle(color:Colors.black,fontSize: 17,fontWeight: FontWeight.w700):TextStyle(color: Colors.red,fontSize: 17,fontWeight: FontWeight.w700)),
+      title: Text(title.toString(),
+          style: flag
+              ? const TextStyle(
+                  color: Colors.black,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w700)
+              : const TextStyle(
+                  color: Colors.red,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w700)),
       subtitle: Row(
         children: [
           flag
-              ? Icon(
+              ? const Icon(
                   Icons.call_made_rounded,
                   color: Colors.green,
                 )
-              : Icon(
+              : const Icon(
                   Icons.call_received,
                   color: Colors.red,
                 ),
-          Text('Yesterday,18:30'),
-
+          const Text('Yesterday,18:30'),
         ],
-
       ),
-
       leading: CircleAvatar(
         child: ClipRRect(
           borderRadius: BorderRadius.circular(60),
@@ -101,9 +107,35 @@ class Utilities {
           ),
         ),
       ),
-      trailing: Icon(
+      trailing:  const Icon(
         Icons.call,
         color: Colors.green,
+      ),
+    );
+  }
+
+  Widget listtileforchat(String name, String subtitle, String url,bool flag) {
+    return ListTile(
+      title: Text(name),
+      subtitle: Row(
+        children: [
+         flag?Icon(
+            Icons.check,
+            color: Colors.grey,
+          ):Icon(Icons.done_all,color: Colors.blue,),
+          Text(subtitle),
+        ],
+      ),
+      leading: CircleAvatar(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(60),
+          child: Image.network(
+            url,
+            fit: BoxFit.fill,
+            height: 100,
+            width: 100,
+          ),
+        ),
       ),
     );
   }
